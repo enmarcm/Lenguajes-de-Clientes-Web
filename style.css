@@ -10,9 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(90, 255, 255, 0.751);
+    background-color: #4169E1;
     height: 100vh;
 }
+
 
 .calculadora{
     min-height: 550px;
@@ -28,6 +29,7 @@
 .pantalla{
     display: flex; 
     margin: 0.8rem;
+    
 }
 
 .pantalla>textarea{
@@ -48,8 +50,6 @@
 
 .botones{
     display: grid;
-    /* justify-content: center;
-    align-content: center; */
     padding: 0.8rem;
     height: 100%;
     grid-template-columns: repeat(4, 1fr);
@@ -60,13 +60,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
-    /* border-radius: 5rem; */
-    /* LOS BOTONES SE PUEDEN PONER CUADRADOS SI BORDER-RADIUS ES 0 */
-    /* margin: 0.4rem; */
     background-color: #fff;
     cursor: pointer;
-    /* box-shadow: 4px 3px #012d01; */
+    
+    /* LOS BOTONES SE PUEDEN PONER REDONDOS SI BORDER-RADIUS ES 5REM Y APLICAMOS EL MARGIN */
+    /* border-radius: 5rem;
+    margin: 0.4rem;
+    box-shadow: 4px 3px #012d01; */
 }
 
 .boton:hover{
@@ -74,21 +74,21 @@
 }
 
 .boton:active{
-    box-shadow: -4px -3px #012d01;
-    transition: 0.1s ;
+    box-shadow: 2px 3px #012d01;
+    transition: 0.2s ;
 }
 
-
+/*BOTON 0*/
 .boton:nth-child(10){
     grid-column: 1/3;
     border-radius: 0px 0px 0px 10px;
 }
 
+/* BOTON + */
 .boton:nth-child(11){
     grid-row: 1/2;
     grid-column: 4/5;
 
-    /* BORDE PARA ESTE */
     border-radius: 0px 10px 0px 0px;
 }
 
@@ -107,12 +107,14 @@
     grid-column: 4/5;
 }
 
+/* BOTON = */
 .boton:nth-child(15){
     grid-row: 5/6;
     grid-column: 4/5;
     border-radius: 0px 0px 10px 0px;
 }
 
+/* BOTON C*/
 .boton:last-child{
     border-radius: 10px 0px 0px 0px;
     grid-column: 1/4;
@@ -123,7 +125,15 @@
     background-color: #eb7d0f;
 }
 
+
+
 @media(max-width:600px){
+
+    .container{
+        display: flex;
+        align-items: start;
+    }
+
     .calculadora{
         width: 100%;
         margin: 0.5rem;
