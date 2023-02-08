@@ -18,7 +18,8 @@ botones.forEach(boton=>{
             // AQUI CREAMOS UNA EXCEPCION, SI LA OPERACION INGRESADA NO SE PUEDE REALIZAR, DA UN MENSAJE EN LA CALCULADORA Y EN CONSOLA
             try {
                 let resultado = eval(pantalla.value)
-                    if(resultado == Infinity){
+					//AQUI CON ESTO VERIFICAMOS SI N/0 O 0/0 QUE NO SON EXCEPCIONES, SI NO OTRO TIPO DE DATO
+                    if(resultado == Infinity || isNaN(resultado)){
                         opInvalida()
                     }else{
                         pantalla.value = resultado
