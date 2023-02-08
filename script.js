@@ -40,7 +40,7 @@ botones.forEach(boton=>{
             if(ultPant == "." || ultPant == "+" || ultPant == "-" || ultPant == "*" || ultPant == "/"){
                 
                     if(botInn == "." || botInn == "+" || botInn == "-" || botInn == "*" || botInn == "/"){
-                        console.error("se estan colocando dos puntos seguidos")
+                        console.error("se estan colocando dos puntos u operadores aritmeticos seguidos")
                     }else{
                         pantalla.value += botInn
                     }
