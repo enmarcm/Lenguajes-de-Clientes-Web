@@ -8,8 +8,10 @@ class Tab {
     tab.classList.add("tab");
     tab.style.width = `${widthPorcentaje}%`;
 
+
     let tabContent = document.createElement("div");
     tabContent.classList.add("tab-content");
+    
     tabContent.innerHTML = contenido
 
     let tabLine = document.createElement("div");
@@ -35,16 +37,13 @@ class Tab {
 
           try{
             console.log(indiceAux);
-            if (indice < indiceAux) {
+            if (indice < indiceAux){
               // VA DE DERECHA IZQUIERDA
               lines[indiceAux].style.animation = "cierraDerecha 0.6s both";
-
               lines[indice].style.animation = "derechaIzquierda 0.6s both";
-
-      
-            } else {
+            }else{
+              // AQUI DE IZQUIERDA A DERECHA
               lines[indiceAux].style.animation = "cierraIzquierda 0.6s both";
-              // lines[indiceAux].style.left = "100%";
               lines[indice].style.animation = "izquierdaDerecha 0.6s both";
             }
       
@@ -73,10 +72,10 @@ class Tab {
 
 }
 
-const tab1 = new Tab(70, document.querySelector(".tab-container"), "Opcion 1")
-const tab2 = new Tab(20, document.querySelector(".tab-container"), "Opcion 2")
-const tab3 = new Tab(10, document.querySelector(".tab-container"), "Opcion 3")
-// const tab3 = new Tab(20, document.querySelector(".tab-container"), "Opcion 3")
+const tab1 = new Tab(25, document.querySelector(".tab-container"), "Opcion 1")
+const tab2 = new Tab(25, document.querySelector(".tab-container"), "Opcion 2")
+const tab3 = new Tab(25, document.querySelector(".tab-container"), "Opcion 3")
+const tab4 = new Tab(25, document.querySelector(".tab-container"), "Opcion 4")
 
 
 // ESTE METODO SIEMPRE SE USA AL FINAL PARA NO TENER QUE METER ESTE CODIGO DENTRO DEL CONSTRUCTOR
