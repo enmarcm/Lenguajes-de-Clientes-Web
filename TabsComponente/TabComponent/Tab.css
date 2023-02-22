@@ -1,0 +1,72 @@
+.tab{
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+    background-color: #a10684;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.tab:hover{
+    cursor: pointer;
+}
+
+.tab:active{
+    opacity: 0.8;
+}
+
+.tab .tab-content{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    word-wrap: break-word;
+    height: auto;
+}
+
+.tab .tab-line{
+    position: relative;
+}
+
+.line-active{
+    background-color: #ff00ff  ;
+}
+
+
+@keyframes izquierdaDerecha {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes cierraIzquierda {
+    0%{
+        left: -100%;
+    }
+
+    100%{
+        left: 100%;
+    }
+}
+@keyframes cierraDerecha {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+@keyframes derechaIzquierda {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
